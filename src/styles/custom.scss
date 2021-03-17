@@ -18,7 +18,7 @@ $body-bg: $gray-100;
 
 .app-view {
   background-color: $white;
-  height: 100vh;
+  min-height: 100vh;
   padding: $spacer * 1.25;
 }
 
@@ -29,11 +29,15 @@ $body-bg: $gray-100;
 }
 
 .info-container {
-  height: 40vh;
+  height: 39vh;
 }
 
-.search-box {
-  margin: $spacer 0 $spacer 0;
+.h-100 {
+  height: 100%;
+}
+
+.searchbox-container {
+  margin: $spacer * 2 0 $spacer / 2 0;
 }
 
 .card {
@@ -48,4 +52,9 @@ $body-bg: $gray-100;
     font-size: $font-size-base;
     color: $gray-500;
   }
+}
+
+.map-marker {
+  font-size: xxx-large;
+  color: $orange;
 }

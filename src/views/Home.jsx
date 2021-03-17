@@ -9,15 +9,18 @@ const Home = () => {
   return (
     <div className="container app-view">
       <div className="row">
-        <div className="col-3">
+        <div className="col-md-3 col-sm-12">
           <HistoryList />
         </div>
-        <div className="col-9">
+        <div className="col-md-9 col-sm-12">
+          <h4>Your location &#8595;</h4>
           <div className="info-container">
             <UserInfo />
           </div>
-          <h4>Find location by IP or URL &#8595;</h4>
-          <SearchBox />
+          <div className="searchbox-container">
+            <h4>Check location by IP or URL &#8595;</h4>
+            <SearchBox />
+          </div>
           <div className="info-container">
             <SearchInfo />
           </div>

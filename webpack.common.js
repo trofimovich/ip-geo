@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // eslint-disable-line import/no-extraneous-dependencies
 const path = require('path');
+const DotEnv = require('dotenv-webpack'); // eslint-disable-line import/no-extraneous-dependencies
 
 module.exports = {
   entry: './src/index.jsx',
@@ -13,6 +14,7 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html',
     }),
+    new DotEnv(),
   ],
   module: {
     rules: [

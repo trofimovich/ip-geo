@@ -5,11 +5,11 @@ import Map from './shared/Map';
 
 const UserInfo = () => {
   return (
-    <div className="row">
-      <div className="col-9">
-        <Map lat="59" lng="33" />
+    <div className="row h-100">
+      <div className="col-sm-6 col-md-9 h-100">
+        <Map />
       </div>
-      <div className="col-3">
+      <div className="col-sm-6 col-md-3">
         <Card
           title="Title"
           content="USA - New York"
