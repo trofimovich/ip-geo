@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const ipstackAPI = axios.create({
-  baseURL: 'http://api.ipstack.com/',
+  baseURL: 'https://api.ipstack.com/',
   timeout: 1000,
 });
 

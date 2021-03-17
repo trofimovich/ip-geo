@@ -15,7 +15,7 @@ npm i
 ### Development server
 
 ```bash
-npm start
+npm run dev
 ```
 
 You can view the development server at `localhost:9000`.
@@ -24,4 +24,11 @@ You can view the development server at `localhost:9000`.
 
 ```bash
 npm run build
+```
+
+### Lint
+
+```bash
+npm run lint
+npm run lint:fix
 ```
