@@ -10,7 +10,7 @@ const Map = ({ lat = 59.95, lng = 30.35 }) => {
         bootstrapURLKeys={{ key: process.env.GOOGLE_MAP_API_KEY }}
         defaultCenter={{ lat: 59.95, lng: 30.35 }}
         center={{ lat, lng }}
-        defaultZoom={8}
+        defaultZoom={11}
       >
         <MapMarker lat={lat} lng={lng} />
       </GoogleMapReact>

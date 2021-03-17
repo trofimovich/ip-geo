@@ -3,13 +3,14 @@ import { string, func } from 'prop-types';
 
 const SearchBox = ({ placeholder, btnText, onSearch }) => {
   const [searchString, setSearchString] = useState('');
+
   return (
     <div className="input-group mb-3 search-box">
       <input
         type="text"
         className="form-control"
         placeholder={placeholder}
-        onChange={(evt) => setSearchString(evt)}
+        onChange={(evt) => setSearchString(evt.target.value)}
         aria-describedby="button-addon2"
       />
       <button
