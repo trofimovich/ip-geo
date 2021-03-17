@@ -1,17 +1,17 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // eslint-disable-line import/no-extraneous-dependencies
+const path = require('path');
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: './src/index.jsx',
   output: {
-    path: path.resolve(__dirname, "build"),
-    filename: "bundle.js",
+    path: path.resolve(__dirname, 'build'),
+    filename: 'bundle.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      favicon: "./src/images/favicon.png",
-      template: "./src/index.html",
-      filename: "index.html",
+      favicon: './src/images/favicon.png',
+      template: './src/index.html',
+      filename: 'index.html',
     }),
   ],
   module: {
@@ -19,8 +19,11 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ["babel-loader", "eslint-loader"],
+        use: ['babel-loader', 'eslint-loader'],
       },
     ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
   },
 };

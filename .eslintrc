@@ -5,5 +5,7 @@
     "browser": true,
     "es6": true
   },
-  "rules": {}
+  "rules": {
+    "arrow-body-style": 0
+  }
 }

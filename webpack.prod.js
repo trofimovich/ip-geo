@@ -1,13 +1,13 @@
-const { merge } = require("webpack-merge");
-const common = require("./webpack.common");
+const { merge } = require('webpack-merge'); // eslint-disable-line import/no-extraneous-dependencies
+const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // eslint-disable-line import/no-extraneous-dependencies
 
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const common = require('./webpack.common');
 
 module.exports = merge(common, {
-  mode: "production",
+  mode: 'production',
   devtool: false,
   output: {
-    filename: "js/[name].[contenthash].bundle.js",
+    filename: 'js/[name].[contenthash].bundle.js',
   },
   module: {
     rules: [
@@ -16,15 +16,15 @@ module.exports = merge(common, {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               importLoaders: 2,
               sourceMap: false,
               modules: true,
             },
           },
-          "postcss-loader",
-          "sass-loader",
+          'postcss-loader',
+          'sass-loader',
         ],
       },
     ],
@@ -33,8 +33,8 @@ module.exports = merge(common, {
     // Extracts CSS into separate files
     // Note: style-loader is for development, MiniCssExtractPlugin is for production
     new MiniCssExtractPlugin({
-      filename: "styles/[name].[contenthash].css",
-      chunkFilename: "[id].css",
+      filename: 'styles/[name].[contenthash].css',
+      chunkFilename: '[id].css',
     }),
   ],
 });

@@ -1,14 +1,14 @@
-const webpack = require("webpack");
-const path = require("path");
-const { merge } = require("webpack-merge");
-const common = require("./webpack.common");
+const webpack = require('webpack'); // eslint-disable-line import/no-extraneous-dependencies
+const path = require('path');
+const { merge } = require('webpack-merge'); // eslint-disable-line import/no-extraneous-dependencies
+const common = require('./webpack.common');
 
 module.exports = merge(common, {
-  mode: "development",
-  devtool: "inline-source-map",
+  mode: 'development',
+  devtool: 'inline-source-map',
   devServer: {
     historyApiFallback: true,
-    contentBase: path.resolve(__dirname, "build"),
+    contentBase: path.resolve(__dirname, 'build'),
     open: true,
     compress: true,
     hot: true,
@@ -20,13 +20,13 @@ module.exports = merge(common, {
       {
         test: /\.(scss|css)$/,
         use: [
-          "style-loader",
+          'style-loader',
           {
-            loader: "css-loader",
-            options: { sourceMap: true, importLoaders: 1, modules: true },
+            loader: 'css-loader',
+            options: { sourceMap: true, importLoaders: 1 },
           },
-          { loader: "postcss-loader", options: { sourceMap: true } },
-          { loader: "sass-loader", options: { sourceMap: true } },
+          { loader: 'postcss-loader', options: { sourceMap: true } },
+          { loader: 'sass-loader', options: { sourceMap: true } },
         ],
       },
     ],
