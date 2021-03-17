@@ -2,10 +2,10 @@ import { combineReducers } from 'redux';
 
 const isFetching = (state = false, action) => {
   switch (action.type) {
-    case 'LOCATION_REQUEST_INIT':
+    case 'LOCATION_USER_REQUEST_INIT':
       return true;
-    case 'LOCATION_REQUEST_SUCCESS':
-    case 'REQUEST_ERROR':
+    case 'LOCATION_USER_REQUEST_SUCCESS':
+    case 'REQUEST_USER_REQUEST_ERROR':
       return false;
     default:
       return state;
@@ -14,9 +14,9 @@ const isFetching = (state = false, action) => {
 
 const location = (state = null, action) => {
   switch (action.type) {
-    case 'LOCATION_REQUEST_INIT':
+    case 'LOCATION_USER_REQUEST_INIT':
       return state;
-    case 'LOCATION_REQUEST_SUCCESS':
+    case 'LOCATION_USER_REQUEST_SUCCESS':
       return action.location;
     case 'REQUEST_ERROR':
       return state;
@@ -25,17 +25,7 @@ const location = (state = null, action) => {
   }
 };
 
-const searchHistory = (state = [], action) => {
-  switch (action.type) {
-    case 'LOCATION_REQUEST_SUCCESS':
-      return [...state, action.location];
-    default:
-      return state;
-  }
-};
-
 export default combineReducers({
-  isFetching,
   location,
-  searchHistory,
+  isFetching,
 });

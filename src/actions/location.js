@@ -9,7 +9,7 @@ export const findUserLocation = () => (dispatch) => {
 };
 
 export const findLocation = (formData) => (dispatch) => {
-  dispatch({ type: 'LOCATION_REQUST_INIT' });
+  dispatch({ type: 'LOCATION_REQUEST_INIT' });
   return api
     .getLocationInfo(formData)
     .then(({ data }) => dispatch({ type: 'LOCATION_REQUEST_SUCCESS', location: { ...data, searchString: formData } }))

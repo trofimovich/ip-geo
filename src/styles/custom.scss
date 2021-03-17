@@ -14,6 +14,7 @@ $body-bg: $gray-100;
 @import "~bootstrap/scss/buttons";
 @import "~bootstrap/scss/forms";
 @import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/spinners";
 @import "~bootstrap/scss/grid";
 
 .app-view {
@@ -29,7 +30,7 @@ $body-bg: $gray-100;
 }
 
 .info-container {
-  height: 39vh;
+  height: 38vh;
 }
 
 .h-100 {
@@ -37,15 +38,23 @@ $body-bg: $gray-100;
 }
 
 .searchbox-container {
-  margin: $spacer * 2 0 $spacer / 2 0;
+  margin: $spacer * 2 0 $spacer 0;
 }
 
 .card {
   background-color: $gray-200;
   padding: $spacer / 2;
+  min-height: 100px;
+  position: relative;
 
   .card-title {
     font-size: $font-size-base * 1.25
+  }
+
+  .spinner-border {
+    position: absolute;
+    top: 30%;
+    left: 40%;
   }
 
   .card-text {

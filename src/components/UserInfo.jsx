@@ -12,16 +12,18 @@ const UserInfo = () => {
     dispatch(findUserLocation());
   }, []);
 
-  const userLocation = useSelector((state) => state.userLocation);
+  const location = useSelector(({ userLocation }) => userLocation.location);
+  const isFetching = useSelector(({ userLocation }) => userLocation.isFetching);
   return (
     <div className="row h-100">
       <div className="col-sm-6 col-md-9 h-100">
-        <Map lat={userLocation?.latitude} lon={userLocation?.longitude} />
+        <Map lat={location?.latitude} lng={location?.longitude} />
       </div>
       <div className="col-sm-6 col-md-3">
         <Card
-          title={userLocation?.ip}
-          content={`${userLocation?.country_name} - ${userLocation?.city}`}
+          title={location?.ip}
+          content={`${location?.country_name} - ${location?.city}`}
+          isLoading={isFetching}
         />
       </div>
     </div>
