@@ -13,12 +13,12 @@ const Home = () => {
   const dispatch = useDispatch();
   const validateSearch = (val) => validators.ip(val) || validators.url(val);
   return (
-    <div className="container app-view">
+    <div className="container-fluid-md container-lg app-view">
       <div className="row">
-        <div className="col-md-3 col-sm-12">
+        <div className="col-lg-3 col-md-12">
           <HistoryList />
         </div>
-        <div className="col-md-9 col-sm-12">
+        <div className="col-lg-9 col-md-12">
           <h4>Your location &#8595;</h4>
           <div className="info-container">
             <UserInfo />

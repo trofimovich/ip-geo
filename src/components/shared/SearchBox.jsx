@@ -17,6 +17,7 @@ const SearchBox = ({
         className={`form-control ${isValid ? '' : 'is-invalid'}`}
         placeholder={placeholder}
         onChange={(evt) => setSearchString(evt.target.value)}
+        onKeyDown={(evt) => evt.key === 'Enter' && validate(searchString) && onSearch(searchString)}
         onBlur={() => setIsValid(validate(searchString))}
         aria-describedby="button-addon2"
       />
@@ -24,6 +25,7 @@ const SearchBox = ({
         onClick={() => isValid && onSearch(searchString)}
         disabled={!searchString || !isValid}
         className="btn btn-primary"
+        id="button-addon2"
         type="submit"
       >
         {btnText}

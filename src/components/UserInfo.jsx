@@ -16,10 +16,10 @@ const UserInfo = () => {
   const isFetching = useSelector(({ userLocation }) => userLocation.isFetching);
   return (
     <div className="row h-100">
-      <div className="col-sm-6 col-md-9 h-100">
+      <div className="col-md-6 col-lg-9 h-100">
         <Map lat={location?.latitude} lng={location?.longitude} />
       </div>
-      <div className="col-sm-6 col-md-3">
+      <div className="col-md-6 col-lg-3">
         <Card
           title={location?.ip}
           content={`${location?.country_name} - ${location?.city}`}

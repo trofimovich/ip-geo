@@ -9,10 +9,10 @@ const SearchInfo = () => {
   const isFetching = useSelector(({ location }) => location.isFetching);
   return (
     <div className="row h-100">
-      <div className="col-sm-6 col-md-9 h-100">
+      <div className="col-md-6 col-lg-9 h-100">
         <Map lat={activeLocation?.latitude} lng={activeLocation?.longitude} />
       </div>
-      <div className="col-sm-6 col-md-3">
+      <div className="col-md-6 col-lg-3">
         {activeLocation && (
           <Card
             title={activeLocation.searchString}
