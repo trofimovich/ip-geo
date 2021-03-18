@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions creates "LOCATION_REQUEST_INIT", "LOCATION_REQUEST_ERROR" in case of error 1`] = `
+Array [
+  Object {
+    "type": "LOCATION_REQUEST_INIT",
+  },
+  Object {
+    "error": [Error: Request failed with status code 500],
+    "type": "LOCATION_REQUEST_ERROR",
+  },
+]
+`;
+
+exports[`actions creates "LOCATION_REQUEST_INIT", "LOCATION_REQUEST_SUCCESS" in case of error 1`] = `
+Array [
+  Object {
+    "type": "LOCATION_REQUEST_INIT",
+  },
+  Object {
+    "location": Object {
+      "country_name": "US",
+      "searchString": "valid.com",
+    },
+    "type": "LOCATION_REQUEST_SUCCESS",
+  },
+]
+`;

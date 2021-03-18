@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBox Renders correctly 1`] = `
+<div
+  className="input-group mb-3 search-box"
+>
+  <input
+    aria-describedby="button-addon2"
+    className="form-control "
+    onBlur={[Function]}
+    onChange={[Function]}
+    placeholder="Search"
+    type="text"
+  />
+  <button
+    className="btn btn-primary"
+    disabled={true}
+    onClick={[Function]}
+    type="submit"
+  >
+    Search
+  </button>
+  <div
+    className="invalid-feedback"
+  >
+    Field has incorrect value
+  </div>
+</div>
+`;
+
+exports[`SearchBox Renders correctly with params 1`] = `
+<div
+  className="input-group mb-3 search-box"
+>
+  <input
+    aria-describedby="button-addon2"
+    className="form-control "
+    onBlur={[Function]}
+    onChange={[Function]}
+    placeholder="Enter some...."
+    type="text"
+  />
+  <button
+    className="btn btn-primary"
+    disabled={true}
+    onClick={[Function]}
+    type="submit"
+  >
+    Test
+  </button>
+  <div
+    className="invalid-feedback"
+  >
+    Some validation message
+  </div>
+</div>
+`;

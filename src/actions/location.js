@@ -5,7 +5,7 @@ export const findUserLocation = () => (dispatch) => {
   return api
     .getLocationInfo()
     .then(({ data }) => dispatch({ type: 'LOCATION_USER_REQUEST_SUCCESS', location: data }))
-    .catch((error) => dispatch({ type: 'REQUEST_ERROR', error }));
+    .catch((error) => dispatch({ type: 'LOCATION_USER_REQUEST_ERROR', error }));
 };
 
 export const findLocation = (formData) => (dispatch) => {
@@ -13,5 +13,5 @@ export const findLocation = (formData) => (dispatch) => {
   return api
     .getLocationInfo(formData)
     .then(({ data }) => dispatch({ type: 'LOCATION_REQUEST_SUCCESS', location: { ...data, searchString: formData } }))
-    .catch((error) => dispatch({ type: 'REQUEST_ERROR', error }));
+    .catch((error) => dispatch({ type: 'LOCATION_REQUEST_ERROR', error }));
 };

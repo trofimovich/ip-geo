@@ -32,3 +32,15 @@ npm run build
 npm run lint
 npm run lint:fix
 ```
+
+### Testing
+
+```bash
+npm run test
+```
+
+### Coverage check
+
+```bash
+npm run test:coverage
+```

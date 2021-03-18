@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Renders correctly 1`] = `
+<span
+  className="map-marker"
+>
+  ★
+</span>
+`;

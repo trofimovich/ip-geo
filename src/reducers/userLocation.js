@@ -5,7 +5,7 @@ const isFetching = (state = false, action) => {
     case 'LOCATION_USER_REQUEST_INIT':
       return true;
     case 'LOCATION_USER_REQUEST_SUCCESS':
-    case 'REQUEST_USER_REQUEST_ERROR':
+    case 'LOCATION_USER_REQUEST_ERROR':
       return false;
     default:
       return state;
@@ -18,7 +18,7 @@ const location = (state = null, action) => {
       return state;
     case 'LOCATION_USER_REQUEST_SUCCESS':
       return action.location;
-    case 'REQUEST_ERROR':
+    case 'LOCATION_USER_REQUEST_ERROR':
       return state;
     default:
       return state;
