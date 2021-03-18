@@ -9,12 +9,14 @@ exports[`SearchBox Renders correctly 1`] = `
     className="form-control "
     onBlur={[Function]}
     onChange={[Function]}
+    onKeyDown={[Function]}
     placeholder="Search"
     type="text"
   />
   <button
     className="btn btn-primary"
     disabled={true}
+    id="button-addon2"
     onClick={[Function]}
     type="submit"
   >
@@ -37,12 +39,14 @@ exports[`SearchBox Renders correctly with params 1`] = `
     className="form-control "
     onBlur={[Function]}
     onChange={[Function]}
+    onKeyDown={[Function]}
     placeholder="Enter some...."
     type="text"
   />
   <button
     className="btn btn-primary"
     disabled={true}
+    id="button-addon2"
     onClick={[Function]}
     type="submit"
   >
